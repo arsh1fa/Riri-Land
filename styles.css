@@ -1,0 +1,47 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #111;
+}
+
+#welcome-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('server-avatar.jpg') no-repeat center center/cover;
+}
+
+.hero-content {
+  text-align: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(45deg, #ff69b4, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  color: #fff;
+  background: linear-gradient(45deg, #6a5acd, #00bfff);
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.scroll-btn:hover {
+  background: linear-gradient(45deg, #00bfff, #6a5acd);
