@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('Riri Land.gif') no-repeat center center/cover;
+  background: url('server-avatar.jpg') no-repeat center center/cover;
 }
 
 .hero-content {
@@ -117,4 +117,25 @@ footer {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-    }
+    } 
+
+/* Styling for Discord Widget Section */
+
+#discord-widget {
+  margin-top: 100px; /* Adjust spacing as needed */
+}
+
+#discord-widget .content-wrapper {
+  padding: 50px 20px; /* Adjust padding as needed */
+}
+
+#discord-widget h2 {
+  font-size: 2em; /* Adjust font size as needed */
+}
+
+#discord-widget iframe {
+  border: none;
+  width: 100%;
+  max-width: 350px; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+}
