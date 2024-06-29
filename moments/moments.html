@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riri Land - Moments</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Memorable Moments</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="moments" class="section-background">
+      <div class="content-wrapper">
+        <div class="video-grid">
+          <div class="video">
+            <video controls>
+              <source src="https://cdn.discordapp.com/attachments/1055860089275305994/1205943157850906665/copy_A4144CD5-22BB-4075-864F-B57A51522CF2.mov?ex=667fa956&is=667e57d6&hm=0c6d7883bcb1e84ce68aae789c109f3f08db05b2abf39f04df5cb1d1394a1c45&" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video">
+            <video controls>
+              <source src="https://cdn.discordapp.com/attachments/1055860089275305994/1205943157850906665/copy_A4144CD5-22BB-4075-864F-B57A51522CF2.mov?ex=667fa956&is=667e57d6&hm=0c6d7883bcb1e84ce68aae789c109f3f08db05b2abf39f04df5cb1d1394a1c45&" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- Add more videos as needed -->
+        </div>
+      </div>
+    </section>
+    
+    <section id="back-section">
+      <div class="content-wrapper">
+        <a href="../home.html" class="button back-button">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Riri Land. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts.js"></script>
+  <script>
+    // JavaScript to add 'playing' class to the video being played
+    document.querySelectorAll('.video video').forEach(video => {
+      video.addEventListener('play', function() {
+        // Remove 'playing' class from all videos
+        document.querySelectorAll('.video').forEach(videoContainer => {
+          videoContainer.classList.remove('playing');
+        });
+        // Add 'playing' class to the parent video container
+        this.closest('.video').classList.add('playing');
+      });
+    });
+  </script>
+</body>
+</html>
