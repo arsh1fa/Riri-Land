@@ -12,13 +12,14 @@ body {
   text-align: center;
   padding: 20px 0;
   background: linear-gradient(45deg, #ff69b4, #00bfff);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .header-content h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3em;
   margin: 0;
-  color: #fff; /* Ensure the text color is white */
+  color: #fff;  /* Ensure the text color is white */
 }
 
 .section-background {
@@ -29,6 +30,7 @@ body {
   width: 80%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .content-wrapper {
@@ -48,6 +50,7 @@ body {
   font-size: 1.2em;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .button:hover {
@@ -67,6 +70,7 @@ body {
   font-size: 1.2em;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .back-button:hover {
@@ -79,16 +83,55 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /* Error message styles */
 .error-message {
   font-size: 2em;
   margin: 20px 0;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .sad-face {
-  font-size: 5em;
+  font-size: 2em;  /* Smaller size for :-( */
   color: #ff69b4;
   margin: 20px 0;
+  position: relative;
+}
+
+.sad-face .colon,
+.sad-face .parenthesis {
+  position: relative;
+  font-size: 2em;
+  animation: meetInMiddle 1s ease-in-out;
+}
+
+.sad-face .colon {
+  left: -10px; /* Start position off the left side */
+  animation-delay: 0.5s; /* Delay for synchronization */
+}
+
+.sad-face .parenthesis {
+  right: -10px; /* Start position off the right side */
+  animation-delay: 0.5s; /* Delay for synchronization */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes meetInMiddle {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(10px + 50% - 100%)); /* Adjust position to meet in the middle */
+  }
 }
