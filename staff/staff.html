@@ -15,27 +15,55 @@
         <h2>Our Staff</h2>
         <div class="staff-grid">
           <div class="staff-member">
-            <img src="staff_img/staff1.jpg" alt="Arifa">
-            <h3>Arifa</h3>
-            <p>Server owner</p>
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="staff_img/staff1.jpg" alt="Arifa">
+                  <h3>Arifa</h3>
+                </div>
+                <div class="flip-card-back">
+                  <h3>Arifa</h3>
+                  <p>Server Owner</p>
+                  <p>Arifa loves to engage with the community and ensure everyone is having a great time!</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="staff-member">
-            <img src="staff_img/staff2.jpg" alt="Baraa">
-            <h3>Baraa</h3>
-            <p>Server Admin</p>
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="staff_img/staff2.jpg" alt="Baraa">
+                  <h3>Baraa</h3>
+                </div>
+                <div class="flip-card-back">
+                  <h3>Baraa</h3>
+                  <p>Server Admin</p>
+                  <p>Baraa is always there to assist with any technical issues and keeps the server running smoothly.</p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- Add more staff members as needed -->
         </div>
       </div>
     </section>
     
-
   </main>
 
   <footer>
     <p>&copy; 2024 Riri Land. All rights reserved.</p>
   </footer>
 
-  <script src="../scripts.js"></script>
+  <script>
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.flip-card').forEach(c => {
+          if (c !== card) c.querySelector('.flip-card-inner').classList.remove('flipped');
+        });
+        card.querySelector('.flip-card-inner').classList.toggle('flipped');
+      });
+    });
+  </script>
 </body>
 </html>
